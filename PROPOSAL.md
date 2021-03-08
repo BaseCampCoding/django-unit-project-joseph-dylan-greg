@@ -16,15 +16,15 @@ after we receive feedback from the current students on what to add.
 #### Tuesday: Have base template for website operational. 
 Dylan will work on question models and user model, Joseph will work on templates, and Greg will start working on questions and content.
 
-#### Wednesday: A user can login/logout w/ google, navbar with links to everything (no content/questions yet), to greet the user on the navbar, and add definition/html for video section. 
-Greg will work on a user logging in and out using google and writing down more questions for us to use, Joseph will work on the navbar and 
+#### Wednesday: A user can login/logout, change their password, navbar with links to everything (no content/questions yet), to greet the user on the navbar, and add definition/html for video section. 
+Greg will work on a user logging in and out/changing their password and writing down more questions for us to use, Joseph will work on the navbar and 
 greeting the user, and Dylan will work on the definition model/html section for videos.
 
 #### Thursday: Start implementing the questions/definitions/videos. 
 Greg will implement the questions, Joseph will implement definitions, and Dylan will implement videos. If 
 one or more of our group finishes our implementation of the content we will help our peer finish their implementations.
 
-#### Friday: By the end of Friday users can navigate through the site, watch videos, look at definitions, answer questions, login/logout w/ google. 
+#### Friday: By the end of Friday users can navigate through the site, watch videos, look at definitions, answer questions, login/logout. 
 For anything that is not finished or broken should be fixed by either myself, Greg, or Dylan by the end of Friday.
 
 ## Week 2 Monday-Thursday Daily Goals
