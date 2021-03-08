@@ -14,7 +14,7 @@ after we receive feedback from the current students on what to add.
 
 ## Week 1 Tuesday-Friday Daily Goals
 #### Tuesday: Have base template for website operational. 
-Dylan will work on question models, Joseph will work on templates, and Greg will start working on questions and content.
+Dylan will work on question models and user model, Joseph will work on templates, and Greg will start working on questions and content.
 
 #### Wednesday: A user can login/logout w/ google, navbar with links to everything (no content/questions yet), to greet the user on the navbar, and add definition/html for video section. 
 Greg will work on a user logging in and out using google and writing down more questions for us to use, Joseph will work on the navbar and 
