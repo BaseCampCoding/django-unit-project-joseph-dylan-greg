@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "cards",
-    'crispy_forms',
+    "crispy_forms",
+    "multiselectfield",
 ]
 
 AUTH_USER_MODEL = "cards.User"
@@ -123,7 +124,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
