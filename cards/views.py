@@ -7,7 +7,7 @@ from django.views import generic
 from .models import Reflection
 
 # Create your views here.
-class HomepageView(TemplateView):
+class WelcomeView(TemplateView):
     template_name = "homepage.html"
 
 
