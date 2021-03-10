@@ -16,9 +16,8 @@ after we receive feedback from the current students on what to add.
 #### Tuesday: Have base template for website operational. 
 Dylan will work on question models and user model, Joseph will work on templates, and Greg will start working on questions and content.
 
-#### Wednesday: A user can login/logout, change their password, navbar with links to everything (no content/questions yet), to greet the user on the navbar, and add definition/html for video section. 
-Greg will work on a user logging in and out/changing their password and writing down more questions for us to use, Joseph will work on the navbar and 
-greeting the user, and Dylan will work on the definition model/html section for videos.
+#### Wednesday: A user can login/logout, change their password, navbar with links to everything (no content/questions yet), to greet the user on the navbar, and add definition/html for video section. As a bonus make sure the models/views are configured to host the content.
+Greg will work on the models/views, Joseph will work on the definitions, and Dylan will work on the html section for videos.
 
 #### Thursday: Start implementing the questions/definitions/videos. 
 Greg will implement the questions, Joseph will implement definitions, and Dylan will implement videos. If 
