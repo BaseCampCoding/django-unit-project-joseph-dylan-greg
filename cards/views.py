@@ -18,7 +18,7 @@ class HomeView(TemplateView):
 class ReflectionCreateView(CreateView):
     template_name = "reflections.html"
     model = Reflection
-    fields = ("author", "body")
+    fields = ("body",)
 
 
 class DefinitionView(TemplateView):
