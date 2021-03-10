@@ -8,6 +8,7 @@ from .views import (
     ReflectionCreateView,
     PrintView,
     IndexView,
+    PythonDefView,
 )
 
 urlpatterns = [
@@ -18,5 +19,6 @@ urlpatterns = [
     path("print/", PrintView.as_view(), name="print"),
     path("indexes/", IndexView.as_view(), name="indexes"),
     path("definitions/", DefinitionView.as_view(), name="definition"),
+    path("pythondef/", PythonDefView.as_view(), name="pydef"),
     path("reflections/", ReflectionCreateView.as_view(), name="reflection"),
 ]

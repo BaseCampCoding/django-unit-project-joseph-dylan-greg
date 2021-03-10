@@ -22,7 +22,10 @@ class ReflectionCreateView(CreateView):
 
 
 class DefinitionView(TemplateView):
-    template_name = "defintion.html"
+    template_name = "definition.html"
+
+class PythonDefView(TemplateView):
+    template_name = "python_def.html"
 
 
 class VideoView(TemplateView):
