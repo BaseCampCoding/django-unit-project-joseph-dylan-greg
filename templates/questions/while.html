@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="#" method="post" id="quiz">
+
+    <h5>nums = [1,2,3,4,5,6,7,8,9]<br>
+        while True:<br>
+        ...for i in nums:<br>
+	      ......print (i)<br>
+	    How many times would this statement print i?
+</h5>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-A"
+        value="A"
+      />
+      <label for="question-1-answers-A">A) 1 </label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-B"
+        value="B"
+      />
+      <label for="question-1-answers-B">B) 5</label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-C"
+        value="C"
+      />
+      <label for="question-1-answers-C">C) 9</label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-D"
+        value="D"
+      />
+      <label for="question-1-answers-D">D) 81</label>
+    </div>
+    <input type="submit" value="Submit Quiz" />
+</form>
+{% endblock content %}

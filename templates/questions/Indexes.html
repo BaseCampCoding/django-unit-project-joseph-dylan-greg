@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<form action="#" method="post" id="quiz">
+
+    <h5>letters = ['w' ,'x', 'y',’z’]<br> 
+        letters[1]<br> 
+        What would this index be?"
+    </h5>
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-A"
+        value="A"
+      />
+      <label for="question-1-answers-A">A) 'z' </label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-B"
+        value="B"
+      />
+      <label for="question-1-answers-B">B) ‘y’ </label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-C"
+        value="C"
+      />
+      <label for="question-1-answers-C">C) 'x'</label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-D"
+        value="D"
+      />
+      <label for="question-1-answers-D">D) ‘w'</label>
+    </div>
+    <input type="submit" value="Submit Quiz" />
+</form>
+{% endblock content %}
