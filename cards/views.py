@@ -29,8 +29,17 @@ class VideoView(TemplateView):
     template_name = "videos.html"
 
 
+# question templates
 class PythonView(TemplateView):
     template_name = "pqa.html"
+
+
+class PrintView(TemplateView):
+    template_name = "print.html"
+
+
+class IndexView(TemplateView):
+    template_name = "Indexes.html"
 
 
 class SignUpView(generic.CreateView):
