@@ -16,6 +16,8 @@ class HomeView(TemplateView):
 class VideoView(TemplateView):
     template_name = "videos.html"
 
+class PythonView(TemplateView):
+    template_name = "pqa.html"
 
 class SignUpView(generic.CreateView):
     form_class = CustomUserCreationForm
