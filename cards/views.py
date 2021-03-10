@@ -31,15 +31,25 @@ class VideoView(TemplateView):
 
 # question templates
 class PythonView(TemplateView):
-    template_name = "pqa.html"
-
+    template_name = "questions/pqa.html"
 
 class PrintView(TemplateView):
-    template_name = "print.html"
-
+    template_name = "questions/print.html"
 
 class IndexView(TemplateView):
-    template_name = "indexes.html"
+    template_name = "questions/indexes.html"
+
+class IfView(TemplateView):
+    template_name="questions/if.html"
+
+class ForView(TemplateView):
+    template_name="questions/for.html"
+
+class WhileView(TemplateView):
+    template_name="questions/while.html"
+
+class DictView(TemplateView):
+    template_name="questions/dict.html"
 
 
 class SignUpView(generic.CreateView):

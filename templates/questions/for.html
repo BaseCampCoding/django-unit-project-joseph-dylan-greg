@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="#" method="post" id="quiz">
+
+    <h5>Nums =  [1,2,3,4,5,6,7,8,9,10]<br>
+        For i in Nums:<br>
+        ...print(“A”)<Br>
+	      How many times would this code print A?
+    </h5>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-A"
+        value="A"
+      />
+      <label for="question-1-answers-A">A) 5 </label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-B"
+        value="B"
+      />
+      <label for="question-1-answers-B">B) 10</label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-C"
+        value="C"
+      />
+      <label for="question-1-answers-C">C) 15</label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-D"
+        value="D"
+      />
+      <label for="question-1-answers-D">D) 20</label>
+    </div>
+    <input type="submit" value="Submit Quiz" />
+</form>
+{% endblock content %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="#" method="post" id="quiz">
+
+    <h5>ans = “a”<br>
+	      If ans == a:<br>
+        ...print(“a”)<br>
+	      What would happen if you ran this code?
+    </h5>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-A"
+        value="A"
+      />
+      <label for="question-1-answers-A">A) It would print out an a </label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-B"
+        value="B"
+      />
+      <label for="question-1-answers-B">B) It would give a syntax error</label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-C"
+        value="C"
+      />
+      <label for="question-1-answers-C">C) It would do nothing</label>
+    </div>
+
+    <div>
+      <input
+        type="radio"
+        name="question-1-answers"
+        id="question-1-answers-D"
+        value="D"
+      />
+      <label for="question-1-answers-D">D) It would runtime error</label>
+    </div>
+    <input type="submit" value="Submit Quiz" />
+</form>
+{% endblock content %}
