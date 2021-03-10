@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <h4>Made by students for students</h4>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Python
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a href="{% url 'pqa' %}">View All</a>
+    <a href="#">Print</a><br>
+    <a href="#">Index</a><br>
+    <a href="#">If/Elif</a><br>
+    <a href="#">For loops</a><br>
+    <a href="#">While Loops</a><br>
+    <a href="#">Dictionaries</a>
+  </div>
+</div>
 {% endblock content %} 
