@@ -1,16 +1,24 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.contrib.auth import get_user_model
-from multiselectfield import MultiSelectField
+
 
 # Create your models here.
 class User(AbstractUser):
     email = models.EmailField()
 
 
-# Question Model Code
+class Set(models.Model):
+    name = models.CharField(max_length=128)
+    color = models.CharField(max_length=7, default="f5f5dc")
+
+    def __str__(self):
+        return self.name
 
 
-class QuestionModel(models.Model):
-    questions = ()
-    Answer = MultiSelectField(choices=questions)
+class Card(models.Model):
+    set = models.ForeignKey(Set, on_delete=models.CASCADE)
+    front = models.CharField(max_length=256)
+    back = models.CharField(max_length=256)
+
+    def __str__(self):
+        return "(" + self.front + ", " + self.back + ")"
