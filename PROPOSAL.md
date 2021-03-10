@@ -19,9 +19,9 @@ Dylan will work on question models and user model, Joseph will work on templates
 #### Wednesday: A user can login/logout, change their password, navbar with links to everything (no content/questions yet), to greet the user on the navbar, and add definition/html for video section. As a bonus make sure the models/views are configured to host the content.
 Greg will work on the models/views, Joseph will work on the definitions, and Dylan will work on the html section for videos.
 
-#### Thursday: Start implementing the questions/definitions/videos. 
+#### Thursday: Start implementing the questions/definitions/videos and make reflections work on the page. 
 Greg will implement the questions, Joseph will implement definitions, and Dylan will implement videos. If 
-one or more of our group finishes our implementation of the content we will help our peer finish their implementations.
+one or more of our group finishes our implementation of the content we will help our peer finish their implementations or will start working on the reflections page.
 
 #### Friday: By the end of Friday users can navigate through the site, watch videos, look at definitions, answer questions, login/logout. 
 For anything that is not finished or broken should be fixed by either myself, Greg, or Dylan by the end of Friday.
