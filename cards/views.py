@@ -39,7 +39,7 @@ class PrintView(TemplateView):
 
 
 class IndexView(TemplateView):
-    template_name = "Indexes.html"
+    template_name = "indexes.html"
 
 
 class SignUpView(generic.CreateView):

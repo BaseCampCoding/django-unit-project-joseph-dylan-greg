@@ -11,12 +11,12 @@ from .views import (
 )
 
 urlpatterns = [
-    path("", WelcomView.as_view(), name="Welcom"),
+    path("", WelcomeView.as_view(), name="welcome"),
     path("home/", HomeView.as_view(), name="home"),
     path("signup/", SignUpView.as_view(), name="signup"),
     path("pqa/", PythonView.as_view(), name="pqa"),
-    path("print/",PrintView.as_view(), name='print'),
-    path("Indexes/",IndexView.as_view(),name="Indexes"),
+    path("print/", PrintView.as_view(), name="print"),
+    path("indexes/", IndexView.as_view(), name="indexes"),
     path("definitions/", DefinitionView.as_view(), name="definition"),
     path("reflections/", ReflectionCreateView.as_view(), name="reflection"),
 ]
