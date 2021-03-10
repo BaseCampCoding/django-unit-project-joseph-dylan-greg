@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic.edit import CreateView
 from .forms import CustomUserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
+from .models import Reflection
 
 # Create your views here.
 class HomepageView(TemplateView):
@@ -13,11 +15,23 @@ class HomeView(TemplateView):
     template_name = "home.html"
 
 
+class ReflectionCreateView(CreateView):
+    template_name = "reflections.html"
+    model = Reflection
+    fields = ("author", "body")
+
+
+class DefinitionView(TemplateView):
+    template_name = "defintion.html"
+
+
 class VideoView(TemplateView):
     template_name = "videos.html"
 
+
 class PythonView(TemplateView):
     template_name = "pqa.html"
+
 
 class SignUpView(generic.CreateView):
     form_class = CustomUserCreationForm
