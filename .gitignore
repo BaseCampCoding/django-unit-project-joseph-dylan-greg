@@ -3,3 +3,4 @@ csv/
 *.idea
 *.code
 *__pycache__
+db.sqlite3
