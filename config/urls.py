@@ -6,5 +6,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("cards.urls")),
     path("videos/", cards.views.VideoView.as_view(), name="videos"),
-    path('cards/', include('django.contrib.auth.urls')),
+    path("cards/", include("django.contrib.auth.urls")),
 ]
