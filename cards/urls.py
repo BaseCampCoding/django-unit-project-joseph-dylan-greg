@@ -8,14 +8,11 @@ from .views import (
     ReflectionCreateView,
     PrintView,
     IndexView,
-<<<<<<< HEAD
     PythonDefView,
-=======
     IfView,
     ForView,
     WhileView,
     DictView,
->>>>>>> f1cf4d086b3891ed88bc3e41b0c0e5b2c675be41
 )
 
 urlpatterns = [
