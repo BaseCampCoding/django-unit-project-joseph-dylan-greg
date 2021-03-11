@@ -274,14 +274,14 @@ class ReflectionCreateView(CreateView):
 
 # Definition templates
 class DefinitionView(TemplateView):
-    template_name = "definition.html"
+    template_name = "definitions/definition.html"
 
 
 class PythonDefView(TemplateView):
-    template_name = "python_def.html"
+    template_name = "definitions/python_def.html"
 
 class HtmlDefView(TemplateView):
-    template_name = "html_def.html"
+    template_name = "definitions/html_def.html"
 
 #Video templates
 class VideoView(TemplateView):
