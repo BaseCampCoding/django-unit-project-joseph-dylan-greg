@@ -20,17 +20,19 @@ class ReflectionCreateView(CreateView):
     model = Reflection
     fields = ("body",)
 
-
+# Definition templates
 class DefinitionView(TemplateView):
     template_name = "definition.html"
 
 class PythonDefView(TemplateView):
     template_name = "python_def.html"
 
+class HtmlDefView(TemplateView):
+    template_name = "html_def.html"
 
+#Video templates
 class VideoView(TemplateView):
     template_name = "videos.html"
-
 
 # question templates
 class PythonView(TemplateView):
