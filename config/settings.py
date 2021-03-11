@@ -39,10 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "cards",
     "crispy_forms",
-    "multiselectfield",
+    "mcq",
+    "online_test",
 ]
 
-AUTH_USER_MODEL = "cards.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -122,10 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))] 
-STATIC_ROOT = STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
+STATIC_ROOT = STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 LOGIN_REDIRECT_URL = "home"

@@ -1,4 +1,5 @@
-Pipfile
-
-*.sqlite3
-Pipfile.lock
+csv/
+*sqlite3
+*.idea
+*.code
+*__pycache__

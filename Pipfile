@@ -7,8 +7,11 @@ name = "pypi"
 django = "~=3.1.4"
 django-crispy-forms = "==1.9.2"
 django-multiselectfield = "*"
+django-model-utils = "==3.1.2"
+django-utils-six = "*"
+pillow = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9.2"
+python_version = "3.9"
