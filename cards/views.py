@@ -272,7 +272,7 @@ class ReflectionCreateView(CreateView):
     model = Reflection
     fields = ("author", "body")
 
-
+# Definition templates
 class DefinitionView(TemplateView):
     template_name = "definition.html"
 
@@ -280,10 +280,12 @@ class DefinitionView(TemplateView):
 class PythonDefView(TemplateView):
     template_name = "python_def.html"
 
+class HtmlDefView(TemplateView):
+    template_name = "html_def.html"
 
+#Video templates
 class VideoView(TemplateView):
     template_name = "videos.html"
-
 
 # question templates
 class PythonView(TemplateView):

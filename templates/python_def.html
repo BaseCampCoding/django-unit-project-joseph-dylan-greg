@@ -2,5 +2,162 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>test</p>
+
+<style>
+
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      background: #f1f1f1f1;
+    }
+    
+    /* Slides */
+    .mySlides {
+      display: none;
+      padding: 80px;
+      text-align: center;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #888;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      position: absolute;
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+      color: white;
+    }
+
+</style>
+
+<body>
+
+    <div class="slideshow-container">
+    
+    <div class="mySlides">
+      <h3>print()</h3>
+      <p>The print function displays the string value in side its parentheses on the screen.</p>
+    </div>
+    
+    <div class="mySlides">
+      <h3>if statements</h3>
+      <p>The most common type of flow control that executes the block of code if the condition
+          is True. The clause is skipped if False.</p>
+    </div>
+    
+    <div class="mySlides">
+      <h3>else statements</h3>
+      <p>An if statement can optionally be followed by an else statement. The else statement is executed
+          only when the if statement's condition is False.</p>
+    </div>
+
+    <div class="mySlides">
+        <h3>elif statements</h3>
+        <p>An if statement can optionally be followed by an elif statement if the case arrives you
+            want more than one possibility. The elif statement is always followed by an if statement
+            or another elif statement.
+        </p>
+    </div>
+
+    <div class="mySlides">
+        <h3>Variable</h3>
+        <p>A variable is initialized or created the first time a value is stored inside of it.</p>
+    </div>
+
+    <div class="mySlides">
+        <h3>len()</h3>
+        <p>The len function is passed onto a string value or a variable containing a string, and the
+            function evaluates the integer value of the number of characters within the string.
+        </p>
+    </div>
+
+    <div class="mySlides">
+        <h3>Local Scope</h3>
+        <p>Parameters and variables that are assigned in a called function.</p>
+    </div>
+
+    <div class="mySlides">
+        <h3>Global Scope</h3>
+        <p>Variables that are assigned outside of all functions are considered a global scope.</p>
+    </div>
+
+    <div class="mySlides">
+        <h3>List</h3>
+        <p>A list is a value that contains multiple values in an ordered sequence.</p>
+    </div>
+
+    <div class="mySlides">
+        <h3>input()</h3>
+        <p>The input function waits for the user to type some text on the keyboard and press enter.</p>
+    </div>
+
+    <div class="mySlides">
+        <h3>Boolean Value</h3>
+        <p>A data type that only has two values: True and False.</p>
+    </div>
+
+    <div class="mySlides">
+        <h3>Escape Characters</h3>
+        <p>An escape character lets you use characters that are otherwise impossible to put into a string.
+            An escape character consists of a backslash followed by the character you want to add to the string.
+        </p>
+    </div>
+
+    <div class="mySlides">
+        <h3>join()</h3>
+        <p>The join method is useful when you have a list of strings that need to be joined together.</p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+</script>
+    
+</body>
+
 {% endblock content %}
