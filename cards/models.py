@@ -131,7 +131,7 @@ class Quiz(models.Model):
             " attempt by a user will be"
             " stored. Necessary for marking."
         ),
-        verbose_name=_("Exam Paper"),
+        verbose_name=_("Attempts"),
     )
 
     single_attempt = models.BooleanField(

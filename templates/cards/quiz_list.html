@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
-{% block title %}{% trans "All Quizzes" %}{% endblock %}
+{% load card_tags %}
+{% block title %}{% trans "All Cards" %}{% endblock %}
 
 {% block content %}
 <h2>{% trans "Cards" %}</h2>
@@ -37,6 +38,6 @@
 		</table>
 
 	{% else %}
-        <p>{% trans "There are no available quizzes" %}.</p>
+        <p>{% trans "There are no available cards" %}.</p>
     {% endif %}
 {% endblock %}
