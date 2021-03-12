@@ -17,9 +17,7 @@
 	<thead>
 	  <tr>
 		<th>{% trans "Category" %}</th>
-		<th>{% trans "Correctly answererd" %}</th>
-		<th>{% trans "Incorrect" %}</th>
-		<th>%</th>
+		<th>{% trans "Correctly answered" %}</th>
 	  </tr>
 	</thead>
 
@@ -30,8 +28,6 @@
 	  <tr>
 		<td>{{ cat }}</td>
 		<td>{{ value.0 }}</td>
-		<td>{{ value.1 }}</td>
-		<td>{{ value.2 }}</td>
 	  </tr>
 
 	  {% endfor %}
@@ -47,19 +43,19 @@
 
   <hr>
 
-  <h1>{% trans "Previous exam papers" %}</h1>
+  <h1>{% trans "Previous card reviews" %}</h1>
   <p class="lead">
-	{% trans "Below are the results of exams that you have sat." %}
+	{% trans "Below are the results of previous cards that you have reviewed." %}
   </p>
 
   <table class="table table-bordered table-striped">
 
 	<thead>
 	  <tr>
-		<th>{% trans "Quiz Title" %}</th>
+		<th>{% trans "Card Category" %}</th>
 		<th>{% trans "Score" %}</th>
 		<th>{% trans "Possible Score" %}</th>
-		<th>%</th>
+		<th>% Correct</th>
 	  </tr>
 	</thead>
 
