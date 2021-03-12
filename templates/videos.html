@@ -2,6 +2,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if user.is_authenticated %}
     <button onclick="showOrHideDiv()" class="btn btn-dark btn-sm"><h2>Python</h2></button>
     <div id="python" style="display:none">
         <h4>Chapter 2</h4>
