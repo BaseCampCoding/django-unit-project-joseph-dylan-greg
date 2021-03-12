@@ -25,7 +25,7 @@
 		  {{ previous.previous_outcome|yesno:"correct,incorrect" }}
 		</strong>
 	  </p>
-
+	</div>
 	</div>
 
 	{% include 'correct_answer.html' %}
@@ -61,7 +61,7 @@
 {% endif %}
 
 <form action="" method="POST">{% csrf_token %}
-  <input type=hidden name="question_id" value="{{ question.id }}">
+  <input type="hidden" name="question_id" value="{{ question.id }}">
 
   <ul class="list-group">
 
@@ -73,9 +73,9 @@
 
   </ul>
     {% if progress.0|add:1 == progress.1 %}
-    <input type="submit" value={% trans "Submit" %} class="btn btn-large btn-block btn-warning" >
+    <input type="submit" value="{% trans 'Submit' %}" class="btn btn-large btn-block btn-warning" >
     {% else %}
-        <input type="submit" value={% trans "Next" %} class="btn btn-large btn-block btn-warning" >
+        <input type="submit" value="{% trans 'Next' %}" class="btn btn-large btn-block btn-warning" >
     {% endif %}
 </form>
 
