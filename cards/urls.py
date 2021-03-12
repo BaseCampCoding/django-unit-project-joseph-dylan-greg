@@ -48,7 +48,7 @@ urlpatterns = [
     url(regex=r"^$", view=index, name="index"),
     url(regex=r"^login/$", view=login_user, name="login"),
     url(regex=r"^logout/$", view=logout_user, name="logout"),
-    url(regex=r"^quizzes/$", view=QuizListView.as_view(), name="quiz_index"),
+    url(regex=r"^cards/$", view=QuizListView.as_view(), name="quiz_index"),
     url(
         regex=r"^category/$",
         view=CategoriesListView.as_view(),
