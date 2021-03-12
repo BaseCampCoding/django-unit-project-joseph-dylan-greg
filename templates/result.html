@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-
+{% load card_tags %}
 
 {% block title %} {{ quiz.title}} {% endblock %}
-{% block description %} {% trans "Exam Results for" %} {{ quiz.title }} {% endblock %}
+{% block description %} {% trans "Card Results for" %} {{ quiz.title }} {% endblock %}
 
 {% block content %}
 
@@ -29,9 +29,9 @@
   {% if max_score %}
 
   <div>
-	<h2>{% trans "Exam results" %}</h2>
+	<h2>{% trans "Card results" %}</h2>
 	<p>
-	  <small class="muted">{% trans "Exam title" %}: </small>
+	  <small class="muted">{% trans "Card title" %}: </small>
 	  <strong>{{ quiz.title }}</strong></p>
 
 	<p class="lead">
@@ -45,11 +45,11 @@
 
 	{% endif %}
 
-	<p>{% trans "Review the questions below and try the exam again in the future"%}.</p>
+	<p>{% trans "Review the questions below and try the cards again in the future"%}.</p>
 
 	{% if user.is_authenticated %}
 
-	  <p>{% trans "The result of this exam will be stored in your progress section so you can review and monitor your progression" %}.</p>
+	  <p>{% trans "The result of this review will be stored in your progress section so you can review and monitor your progression" %}.</p>
 
 	{% endif %}
   </div>
