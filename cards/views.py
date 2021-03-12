@@ -266,9 +266,19 @@ class WelcomeView(TemplateView):
 class HomeView(TemplateView):
     template_name = "home.html"
 
+# Reflection templates
+class DailyReflectionView(CreateView):
+    template_name = "reflections/daily_reflection.html"
+    model = Reflection
+    fields = ("author", "body")
 
-class ReflectionCreateView(CreateView):
-    template_name = "reflections.html"
+class UnitReflectionView(CreateView):
+    template_name = "reflections/unit_summary.html"
+    model = Reflection
+    fields = ("author", "body")
+
+class WeeklyReflectionView(CreateView):
+    template_name = "reflections/weekly_summary.html"
     model = Reflection
     fields = ("author", "body")
 

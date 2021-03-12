@@ -22,11 +22,19 @@
                   <a class="dropdown-item" href="{% url 'definition' %}">Definitions</a>
                   <a class="dropdown-item" href="{% url 'videos' %}">Videos</a>
                 </div>
-            <li class="nav-tem" style="color:gray">
-                <a href="{% url 'quiz_progress' %}" class="nav-link">Progress</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'reflection' %}">Reflections</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Reflections
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'daily_reflection' %}">Daily Reflections</a>
+                  <a class="dropdown-item" href="{% url 'weekly_summary' %}">Weekly Summary</a>
+                  <a class="dropdown-item" href="{% url 'unit_summary' %}">Unit Summary</a>
+                </div>
+            </li>
+            <li class="nav-item" style="color:gray">
+                <a href="{% url 'quiz_progress' %}" class="nav-link">Progress</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
