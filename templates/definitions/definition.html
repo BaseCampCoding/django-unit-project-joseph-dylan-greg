@@ -2,9 +2,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <h1>Python Definition Flash cards</h1>
 <a href="{% url 'pydef' %}"><button type="button" class="btn btn-primary">Start now!</button></a>
 
 <h1>HTML/CSS Definition Flash cards</h1>
 <a href="{% url 'htmldef' %}"><button type="button" class="btn btn-primary">Start now!</button></a>
+{% else %}
+    <h3 class="ml-2"> You are not logged in</h3>
+{% endif %}
 {% endblock content %}
