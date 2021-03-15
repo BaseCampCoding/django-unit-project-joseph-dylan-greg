@@ -21,19 +21,6 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 
 
-# Create your models here.
-
-
-class Review(models.Model):
-    answer = models.CharField(max_length=100)
-
-    def get_absolute_url(self):
-        return reverse("review")
-
-    def __str__(self):
-        return self.answer
-
-
 class Reflection(models.Model):
     body = models.TextField()
     author = models.ForeignKey(
@@ -42,7 +29,7 @@ class Reflection(models.Model):
     )
 
     def __str__(self):
-        return self.author
+        return str(self.author)
 
     def get_absolute_url(self):
         return reverse("home")

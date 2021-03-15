@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% load i18n %}
 {% if previous.answers %}
 
@@ -14,6 +15,7 @@
   	    <tr class="success">
   		  <td>{{ answer.content }}</td>
   		  <td><strong>{% trans "This is the correct answer" %}</strong></td>
+		  </tr>
         {% else %}
   		<tr>
       	  <td>{{ answer.content }}</td>
