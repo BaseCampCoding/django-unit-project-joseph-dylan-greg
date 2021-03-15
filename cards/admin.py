@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Review, Reflection, Category, Question, Progress, Quiz
+from .models import Reflection, Category, Question, Progress, Quiz
 from .models import CSVUpload
 from django import forms
 from django.contrib.admin.widgets import FilteredSelectMultiple
@@ -94,10 +94,13 @@ class ProgressAdmin(admin.ModelAdmin):
     )
 
 
+class ReflectionAdmin(admin.ModelAdmin):
+    readonly_fields = ["author"]
+
+
 admin.site.register(Quiz, QuizAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(MCQQuestion, MCQuestionAdmin)
 admin.site.register(Progress, ProgressAdmin)
 admin.site.register(CSVUpload, CSVUploadsAdmin)
-admin.site.register(Review)
 admin.site.register(Reflection)

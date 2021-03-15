@@ -1,9 +1,10 @@
-from django.db import models
-from django.contrib.auth import get_user_model
-from django.urls import reverse
 import re
 import json
 import csv
+
+from django.db import models
+from django.contrib.auth import get_user_model
+from django.urls import reverse
 from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.core.validators import (
     MaxValueValidator,
@@ -19,26 +20,15 @@ from .signals import csv_uploaded
 from .validators import csv_file_validator
 from django.contrib.auth.models import User
 from django.contrib import messages
-
-
-# Create your models here.
-
-
-class Review(models.Model):
-    answer = models.CharField(max_length=100)
-
-    def get_absolute_url(self):
-        return reverse("review")
-
-    def __str__(self):
-        return self.answer
+from django_userforeignkey.models.fields import UserForeignKey
 
 
 class Reflection(models.Model):
     body = models.TextField()
-    author = models.ForeignKey(
-        get_user_model(),
-        on_delete=models.CASCADE,
+    author = UserForeignKey(
+        auto_user_add=True,
+        verbose_name="User is automatically assigned",
+        related_name="ReflectionModel",
     )
 
     def __str__(self):
