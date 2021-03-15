@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-<div id="container" style="display:flex; flex-direction: column; align-items:center; margin-top:10%;background:#bcbcbc; 
-  border-radius:12px; border:2px solid black; width:800px; margin-left:25%;">
+<div id="container" style="display:flex; flex-direction: column; align-items:center; margin-top:10%;background:#f2f2f2; 
+  border-radius:20px; border:.5px solid black; width:800px; margin-left:25%;">
     <h2 style="font-size:100px;">{{ quiz.title }}</h2>
     <h3 style="font-size:55px;">{% trans "Category" %}: {{ quiz.category }}</h3>
     {% if quiz.single_attempt %}
@@ -15,7 +15,7 @@
     <p>{{ quiz.description }}</p>
     <p>
       <a href="{% url 'quiz_question' quiz_name=quiz.url %}">
-      <button class="btn-dark" style="font-size: 45px;">{% trans "Start Learning!" %}</button>
+      <button class="btn-dark" style="font-size: 45px; margin-bottom:15px;">{% trans "Start Learning!" %}</button>
       </a>
     </p>
 </div>
