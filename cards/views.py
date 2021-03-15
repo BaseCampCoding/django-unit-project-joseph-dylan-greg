@@ -260,11 +260,12 @@ def logout_user(request):
 
 # Create your views here.
 class WelcomeView(TemplateView):
-    template_name = "homepage.html"
+    template_name = "welcome.html"
 
 
 class HomeView(TemplateView):
     template_name = "home.html"
+
 
 # Reflection templates
 class DailyReflectionView(CreateView):
@@ -272,15 +273,18 @@ class DailyReflectionView(CreateView):
     model = Reflection
     fields = ("author", "body")
 
+
 class UnitReflectionView(CreateView):
     template_name = "reflections/unit_summary.html"
     model = Reflection
     fields = ("author", "body")
 
+
 class WeeklyReflectionView(CreateView):
     template_name = "reflections/weekly_summary.html"
     model = Reflection
     fields = ("author", "body")
+
 
 # Definition templates
 class DefinitionView(TemplateView):
@@ -290,12 +294,15 @@ class DefinitionView(TemplateView):
 class PythonDefView(TemplateView):
     template_name = "definitions/python_def.html"
 
+
 class HtmlDefView(TemplateView):
     template_name = "definitions/html_def.html"
 
-#Video templates
+
+# Video templates
 class VideoView(TemplateView):
     template_name = "videos.html"
+
 
 # question templates
 class PythonView(TemplateView):
