@@ -4,6 +4,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+<div>
     <h3 class="ml-2">Made by students for students</h3>
     <a href="{% url 'daily_reflection' %}">
         <button class="btn btn-primary ml-2">Daily Reflections</button>
@@ -16,6 +17,12 @@
     <a href="{% url 'unit_summary' %}">
         <button class="btn btn-primary ml-2">Unit Summary</button>
     </a>
+</div>
+<div>
+    <a href="{% url 'resource' %}">
+        <button class="btn btn-dark ml-2">Resources</button>
+    </a>
+</div>
 {% else %}
     <h3 class="ml-2"> You are not logged in</h3>
 {% endif %}

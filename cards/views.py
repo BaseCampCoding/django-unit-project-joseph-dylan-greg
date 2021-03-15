@@ -281,6 +281,9 @@ class WeeklyReflectionView(CreateView):
     template_name = "reflections/weekly_summary.html"
     model = Reflection
     fields = ("author", "body")
+# Resource Template
+class ResourcesView(TemplateView):
+    template_name = "resource.html"
 
 # Definition templates
 class DefinitionView(TemplateView):
