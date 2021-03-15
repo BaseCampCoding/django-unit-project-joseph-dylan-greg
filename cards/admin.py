@@ -94,6 +94,10 @@ class ProgressAdmin(admin.ModelAdmin):
     )
 
 
+class ReflectionAdmin(admin.ModelAdmin):
+    readonly_fields = ["author"]
+
+
 admin.site.register(Quiz, QuizAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(MCQQuestion, MCQuestionAdmin)

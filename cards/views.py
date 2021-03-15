@@ -271,12 +271,7 @@ class HomeView(TemplateView):
 class DailyReflectionView(LoginRequiredMixin, CreateView):
     template_name = "reflections/daily_reflection.html"
     model = Reflection
-    fields = ("author", "body")
-
-    def view(request):
-        obj = form.save(commit=False)
-        obj.author = self.request.user
-        obj.save
+    fields = ("body",)
 
 
 class UnitReflectionView(CreateView):
@@ -289,6 +284,8 @@ class WeeklyReflectionView(CreateView):
     template_name = "reflections/weekly_summary.html"
     model = Reflection
     fields = ("author", "body")
+
+
 # Resource Template
 class ResourcesView(TemplateView):
     template_name = "resource.html"
