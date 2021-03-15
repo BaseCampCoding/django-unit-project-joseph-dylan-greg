@@ -6,17 +6,7 @@
 {% if user.is_authenticated %}
 <div>
     <h3 class="ml-2">Made by students for students</h3>
-    <a href="{% url 'daily_reflection' %}">
-        <button class="btn btn-primary ml-2">Daily Reflections</button>
-    </a>
-
-    <a href="{% url 'weekly_summary' %}">
-        <button class="btn btn-primary ml-2">Weekly Summary</button>
-    </a>
-
-    <a href="{% url 'unit_summary' %}">
-        <button class="btn btn-primary ml-2">Unit Summary</button>
-    </a>
+    <a href="{% url 'reflection_detail' %}">Review Reflections</a>
 </div>
 <div>
     <a href="{% url 'resource' %}">
