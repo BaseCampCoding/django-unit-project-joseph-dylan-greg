@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
-{% load crispy_form_tags %}
-
 {% block content %}
-<h3>Test</h3>
+<h1>test</h1>
+{% for day in daily %}
+<p>{{ daily.body }}</p>
+{% endfor %}
 {% endblock content %}

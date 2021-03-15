@@ -277,15 +277,17 @@ class DailyReflectionView(LoginRequiredMixin, CreateView):
 class UnitReflectionView(CreateView):
     template_name = "reflections/unit_summary.html"
     model = Reflection
-    fields = ("author", "body")
+    fields = ("body",)
 
 
 class WeeklyReflectionView(CreateView):
     template_name = "reflections/weekly_summary.html"
     model = Reflection
-    fields = ("author", "body")
+    fields = ("body",)
 
-
+class ReflectionDetailView(ListView):
+    template_name = "reflections/reflection_detail.html"
+    model = Reflection
 # Resource Template
 class ResourcesView(TemplateView):
     template_name = "resource.html"
