@@ -31,6 +31,8 @@ class Reflection(models.Model):
         related_name="ReflectionModel",
     )
 
+    
+
     def __str__(self):
         return str(self.author)
 
