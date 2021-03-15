@@ -50,7 +50,9 @@ urlpatterns = [
     path("reflections/", DailyReflectionView.as_view(), name="daily_reflection"),
     path("weeklysummary/", WeeklyReflectionView.as_view(), name="weekly_summary"),
     path("unitsummary/", UnitReflectionView.as_view(), name="unit_summary"),
-    path("reflectiondetails/", ReflectionDetailView.as_view(), name="reflection_detail"),
+    path(
+        "reflectiondetails/", ReflectionDetailView.as_view(), name="reflection_detail"
+    ),
     path("resources/", ResourcesView.as_view(), name="resource"),
     path("videos/", VideoView.as_view(), name="videos"),
     url(regex=r"^$", view=index, name="index"),

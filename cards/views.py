@@ -285,9 +285,18 @@ class WeeklyReflectionView(CreateView):
     model = Reflection
     fields = ("body",)
 
-class ReflectionDetailView(ListView):
+
+class ReflectionDetailView(DetailView):
     template_name = "reflections/reflection_detail.html"
     model = Reflection
+    context_object_name = "daily"
+
+    def get_object(self):
+        return self.request.user.reflections.latest(
+            "-date_created",
+        )
+
+
 # Resource Template
 class ResourcesView(TemplateView):
     template_name = "resource.html"
