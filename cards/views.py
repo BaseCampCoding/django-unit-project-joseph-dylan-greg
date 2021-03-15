@@ -5,11 +5,11 @@ from django.views.generic.edit import CreateView, FormView
 from .forms import CustomUserCreationForm, QuestionForm
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import Reflection, Review, Quiz, Category, Progress, Sitting, Question
+from .models import Reflection, Quiz, Category, Progress, Sitting, Question
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render
@@ -268,10 +268,15 @@ class HomeView(TemplateView):
 
 
 # Reflection templates
-class DailyReflectionView(CreateView):
+class DailyReflectionView(LoginRequiredMixin, CreateView):
     template_name = "reflections/daily_reflection.html"
     model = Reflection
     fields = ("author", "body")
+
+    def view(request):
+        obj = form.save(commit=False)
+        obj.author = self.request.user
+        obj.save
 
 
 class UnitReflectionView(CreateView):
