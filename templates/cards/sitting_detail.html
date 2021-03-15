@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% extends 'base.html' %}
 {% load i18n %}
 {% load card_tags %}
@@ -45,7 +46,7 @@
 	  </td>
 	  <td>
 		<form action="" method="POST">{% csrf_token %}
-		  <input type=hidden name="qid" value="{{ question.id }}">
+		  <input type="hidden" name="qid" value="{{ question.id }}">
 		  <button type="submit" class="btn btn-warning">{% trans "Toggle whether correct" %}</button>
 		</form>
 	  </td>

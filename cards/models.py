@@ -24,14 +24,13 @@ from django_userforeignkey.models.fields import UserForeignKey
 
 
 class Reflection(models.Model):
-    body = models.TextField()
     author = UserForeignKey(
         auto_user_add=True,
         verbose_name="User is automatically assigned",
-        related_name="ReflectionModel",
+        related_name="reflections",
     )
-
-    
+    body = models.TextField()
+    date_created = models.DateField("Created at", auto_now_add=True)
 
     def __str__(self):
         return str(self.author)
