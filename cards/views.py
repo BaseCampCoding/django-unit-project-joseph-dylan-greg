@@ -263,7 +263,7 @@ class WelcomeView(TemplateView):
     template_name = "welcome.html"
 
 
-class HomeView(TemplateView):
+class HomeView( LoginRequiredMixin, TemplateView):
     template_name = "home.html"
 
 
@@ -274,7 +274,7 @@ class DailyReflectionView(LoginRequiredMixin, CreateView):
     fields = ("body",)
 
 
-class UnitReflectionView(CreateView):
+class UnitReflectionView(LoginRequiredMixin, CreateView):
     template_name = "reflections/unit_summary.html"
     model = Reflection
     fields = ("body",)
@@ -286,7 +286,7 @@ class WeeklyReflectionView(CreateView):
     fields = ("body",)
 
 
-class ReflectionDetailView(DetailView):
+class ReflectionDetailView(LoginRequiredMixin, DetailView):
     template_name = "reflections/reflection_detail.html"
     model = Reflection
     context_object_name = "daily"
@@ -296,54 +296,54 @@ class ReflectionDetailView(DetailView):
 
 
 # Resource Template
-class ResourcesView(TemplateView):
+class ResourcesView(LoginRequiredMixin, TemplateView):
     template_name = "resource.html"
 
 
 # Definition templates
-class DefinitionView(TemplateView):
+class DefinitionView(LoginRequiredMixin, TemplateView):
     template_name = "definitions/definition.html"
 
 
-class PythonDefView(TemplateView):
+class PythonDefView(LoginRequiredMixin, TemplateView):
     template_name = "definitions/python_def.html"
 
 
-class HtmlDefView(TemplateView):
+class HtmlDefView(LoginRequiredMixin, TemplateView):
     template_name = "definitions/html_def.html"
 
 
 # Video templates
-class VideoView(TemplateView):
+class VideoView(LoginRequiredMixin, TemplateView):
     template_name = "videos.html"
 
 
 # question templates
-class PythonView(TemplateView):
+class PythonView(LoginRequiredMixin, TemplateView):
     template_name = "questions/pqa.html"
 
 
-class PrintView(TemplateView):
+class PrintView(LoginRequiredMixin, TemplateView):
     template_name = "questions/print.html"
 
 
-class IndexView(TemplateView):
+class IndexView(LoginRequiredMixin, TemplateView):
     template_name = "questions/indexes.html"
 
 
-class IfView(TemplateView):
+class IfView(LoginRequiredMixin, TemplateView):
     template_name = "questions/if.html"
 
 
-class ForView(TemplateView):
+class ForView(LoginRequiredMixin, TemplateView):
     template_name = "questions/for.html"
 
 
-class WhileView(TemplateView):
+class WhileView(LoginRequiredMixin, TemplateView):
     template_name = "questions/while.html"
 
 
-class DictView(TemplateView):
+class DictView(LoginRequiredMixin, TemplateView):
     template_name = "questions/dict.html"
 
 

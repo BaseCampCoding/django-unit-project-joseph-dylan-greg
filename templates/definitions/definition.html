@@ -2,7 +2,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if user.is_authenticated %}
 <div style="padding: 15px;">
     <div id="container" style="background:#f2f2f2; border-radius:20px; border:.5px solid black; width:620px; height:110px; ">
     <h1>Python Definition Flash Cards</h1>
@@ -12,8 +11,5 @@
     <h1>HTML/CSS Definition Flash Cards</h1>
     <a href="{% url 'htmldef' %}" style="margin-left:25px;"><button type="button" class="btn btn-dark" style="font-size:20px;">Start now!</button></a>
     </div>
-    {% else %}
-        <h3 class="ml-2"> You are not logged in</h3>
-    {% endif %}
 </div>
 {% endblock content %}

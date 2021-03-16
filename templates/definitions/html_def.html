@@ -3,7 +3,6 @@
 
 {% block content %}
 
-{% if user.is_authenticated %}
 <body>
   <div class="slideshow-container">
     <div class="mySlides">
@@ -91,7 +90,4 @@
     }
   </script>
 </body>
-{% else %}
-    <h3 class="ml-2"> You are not logged in</h3>
-{% endif %}
 {% endblock content %}

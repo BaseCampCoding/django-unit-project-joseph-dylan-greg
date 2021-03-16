@@ -2,7 +2,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if user.is_authenticated %}
     <button onclick="showOrHideDiv()" class="btn btn-dark btn-sm" style=" margin-left:15px; margin-top: 15px; justify-content: space-evenly;"><h2>Python</h2></button>
     <div id="python" style="display:none">
         <h4 style="border-width:3px; border-style: solid; width:125px; margin:10px; border-style: None None solid;">Chapter 2</h4>
@@ -103,8 +102,4 @@
        }
     }
 </script>
-{% else %}
-<h3 class="ml-2"> You are not logged in</h3>
-
-{% endif %}
 {% endblock content %}

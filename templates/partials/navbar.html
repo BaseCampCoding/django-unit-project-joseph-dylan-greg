@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'welcome' %}"><img src="/static/Header2.png" alt="Cards 2.0"  height="35rem"></a>
+    <a class="navbar-brand" href="{% url 'home' %}"><img src="/static/Header2.png" alt="Cards 2.0"  height="35rem"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         {% if user.is_authenticated %}
-            <a href="{% url 'home' %}" style="text-decoration:None;"><span class="navbar-text" style=" font-size:20px;">Hi {{ user.username }}</span></a>
+        <!--<span class="navbar-text" style=" font-size:20px;">Hi {{ user.username }}</span>-->
         {% endif %}
         
         <ul class="navbar-nav ml-2">
@@ -39,6 +39,7 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
+        <span class="navbar-text" style=" font-size:20px;margin-right:20px;">Hi {{ user.username }}</span>
             <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" font-size:20px;">
                 User
