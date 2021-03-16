@@ -292,9 +292,7 @@ class ReflectionDetailView(DetailView):
     context_object_name = "daily"
 
     def get_object(self):
-        return self.request.user.reflections.latest(
-            "-date_created",
-        )
+        return Reflection.objects.last()
 
 
 # Resource Template

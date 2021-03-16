@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'home' %}"><img src="/static/Header2.png" alt="Cards 2.0"  height="35rem"></a>
+    <a class="navbar-brand" href="{% url 'welcome' %}"><img src="/static/Header2.png" alt="Cards 2.0"  height="35rem"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         {% if user.is_authenticated %}
-            <span class="navbar-text" style=" font-size:20px;">Hi {{ user.username }}</span>
+            <a href="{% url 'home' %}" style="text-decoration:None;"><span class="navbar-text" style=" font-size:20px;">Hi {{ user.username }}</span></a>
         {% endif %}
         
         <ul class="navbar-nav ml-2">

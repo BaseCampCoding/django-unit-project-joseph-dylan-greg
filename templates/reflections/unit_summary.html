@@ -4,13 +4,15 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-{% if user.is_authenticated %}
-<h1>Unit Summary</h1>
-<form action="" method="post">{% csrf_token %}
-{{ form|crispy }}
-<button class="btn btn-success ml-2" type="submit">Save</button>
-</form>
-{% else %}
-    <h3 class="ml-2"> You are not logged in</h3>
-{% endif %}
+<div style="padding: 15px;">
+    {% if user.is_authenticated %}
+    <h1>Unit Summary</h1>
+    <form action="" method="post">{% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-success ml-2" type="submit">Save</button>
+    </form>
+    {% else %}
+        <h3 class="ml-2"> You are not logged in</h3>
+    {% endif %}
+</div>
 {% endblock content %}
