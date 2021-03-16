@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block content %}
-{% if user.is_authenticated %}
 <div style="padding: 15px;">
     <div>
         <h3 class="ml-2">Made by students for students</h3>
@@ -15,9 +14,6 @@
                 <button class="btn btn-dark ml-2" style=" font-size:25px;">Resources</button>
             </a>
     </div>
-    {% else %}
-        <h3 class="ml-2"> You are not logged in</h3>
-    {% endif %}
 </div>
 <div>
 <a href="{% url 'reflection_detail' %}">Review Reflections</a>
@@ -27,7 +23,5 @@
         <button class="btn btn-dark ml-2">Resources</button>
     </a>
 </div>
-{% else %}
-    <h3 class="ml-2"> You are not logged in</h3>
-{% endif %}
+
 {% endblock content %} 
