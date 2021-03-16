@@ -263,7 +263,7 @@ class WelcomeView(TemplateView):
     template_name = "welcome.html"
 
 
-class HomeView( LoginRequiredMixin, TemplateView):
+class HomeView(LoginRequiredMixin, TemplateView):
     template_name = "home.html"
 
 
@@ -289,7 +289,6 @@ class WeeklyReflectionView(CreateView):
 class ReflectionDetailView(LoginRequiredMixin, DetailView):
     template_name = "reflections/reflection_detail.html"
     model = Reflection
-    context_object_name = "daily"
 
     def get_object(self):
         return Reflection.objects.last()
