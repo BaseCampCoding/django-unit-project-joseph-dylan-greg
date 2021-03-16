@@ -5,7 +5,7 @@
 {% block content %}
 <div style="padding: 15px;">
     <div>
-        <h3 class="ml-2">Made by students for students</h3>
+        <h1 style="margin-bottom: 25px;" class="ml-2">Made by students for students</h1>
     </div>
     <div style = "display:flex; flex-direction: row;">
         <a class="btn btn-dark ml-2" href="{% url 'reflection_detail' %}" style=" font-size:25px;">Review Reflections</a>
@@ -13,15 +13,8 @@
             <a href="{% url 'resource' %}">
                 <button class="btn btn-dark ml-2" style=" font-size:25px;">Resources</button>
             </a>
+        </div>
     </div>
-</div>
-<div>
-<a href="{% url 'reflection_detail' %}">Review Reflections</a>
-</div>
-<div>
-    <a href="{% url 'resource' %}">
-        <button class="btn btn-dark ml-2">Resources</button>
-    </a>
 </div>
 
 {% endblock content %} 
