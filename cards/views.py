@@ -263,7 +263,7 @@ class WelcomeView(TemplateView):
     template_name = "welcome.html"
 
 
-class HomeView( LoginRequiredMixin, TemplateView):
+class HomeView(LoginRequiredMixin, TemplateView):
     template_name = "home.html"
 
 
