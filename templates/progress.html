@@ -8,80 +8,80 @@
 {% block description %} {% trans "User Progress Page" %} {% endblock %}
 
 {% block content %}
+<div style="padding: 15px;">
+	{% if cat_scores %}
 
-  {% if cat_scores %}
+	<h1>{% trans "Question Category Scores" %}</h1>
 
-  <h1>{% trans "Question Category Scores" %}</h1>
+	<table class="table table-bordered table-striped">
 
-  <table class="table table-bordered table-striped">
+		<thead>
+		<tr>
+			<th>{% trans "Category" %}</th>
+			<th>{% trans "Total Correct" %}</th>
+			<th>{% trans "Total Incorrect" %}</th>
+			<th>%</th>
+		</tr>
+		</thead>
 
-	<thead>
-	  <tr>
-		<th>{% trans "Category" %}</th>
-		<th>{% trans "Total Correct" %}</th>
-		<th>{% trans "Total Incorrect" %}</th>
-		<th>%</th>
-	  </tr>
-	</thead>
-
-	<tbody>
-
-
-	  {% for cat, value in cat_scores.items %}
-	  <tr>
-		<td>{{ cat }}</td>
-		<td>{{ value.0 }}</td>
-		<td>{{ value.1 }}</td>
-		<td>{{ value.2 }}</td>
-	  </tr>
-
-	  {% endfor %}
-
-	</tbody>
-
-  </table>
+		<tbody>
 
 
-  {% endif %}
+		{% for cat, value in cat_scores.items %}
+		<tr>
+			<td>{{ cat }}</td>
+			<td>{{ value.0 }}</td>
+			<td>{{ value.1 }}</td>
+			<td>{{ value.2 }}</td>
+		</tr>
 
-  {% if exams %}
+		{% endfor %}
 
-  <hr>
+		</tbody>
 
-  <h1>{% trans "Previous card reviews" %}</h1>
-  <p class="lead">
-	{% trans "Below are the results of previous cards that you have reviewed." %}
-  </p>
+	</table>
 
-  <table class="table table-bordered table-striped">
 
-	<thead>
-	  <tr>
-		<th>{% trans "Card Category" %}</th>
-		<th>{% trans "Score" %}</th>
-		<th>{% trans "Possible Score" %}</th>
-		<th>% Correct</th>
-	  </tr>
-	</thead>
+	{% endif %}
 
-	<tbody>
+	{% if exams %}
 
-	  {% for exam in exams %}
+	<hr>
 
-	  <tr>
-		<td>{{ exam.quiz.title }}</td>
-		<td>{{ exam.current_score }}</td>
-		<td>{{ exam.get_max_score }}</td>
-		<td>{{ exam.get_percent_correct }}</td>
-	  </tr>
+	<h1>{% trans "Previous card reviews" %}</h1>
+	<p class="lead">
+		{% trans "Below are the results of previous cards that you have reviewed." %}
+	</p>
 
-	  {% endfor %}
+	<table class="table table-bordered table-striped">
 
-	</tbody>
+		<thead>
+		<tr>
+			<th>{% trans "Card Category" %}</th>
+			<th>{% trans "Score" %}</th>
+			<th>{% trans "Possible Score" %}</th>
+			<th>% Correct</th>
+		</tr>
+		</thead>
 
-  </table>
+		<tbody>
 
-  {% endif %}
+		{% for exam in exams %}
 
+		<tr>
+			<td>{{ exam.quiz.title }}</td>
+			<td>{{ exam.current_score }}</td>
+			<td>{{ exam.get_max_score }}</td>
+			<td>{{ exam.get_percent_correct }}</td>
+		</tr>
+
+		{% endfor %}
+
+		</tbody>
+
+	</table>
+
+	{% endif %}
+</div>
 
 {% endblock %}
