@@ -5,7 +5,16 @@ from django.views.generic.edit import CreateView, FormView
 from .forms import CustomUserCreationForm, QuestionForm
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import DailyReflection, WeeklyReflection, UnitReflection, Quiz, Category, Progress, Sitting, Question
+from .models import (
+    DailyReflection,
+    WeeklyReflection,
+    UnitReflection,
+    Quiz,
+    Category,
+    Progress,
+    Sitting,
+    Question,
+)
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -286,18 +295,19 @@ class WeeklyReflectionView(CreateView):
     fields = ("body",)
 
 
-class ReflectionDetailView(LoginRequiredMixin, DetailView):
+class ReflectionDetailView(LoginRequiredMixin, TemplateView):
     template_name = "reflections/reflection_detail.html"
-    model = DailyReflection
 
     def get_context_data(self, **kwargs):
         context = super(ReflectionDetailView, self).get_context_data(**kwargs)
-        context["daily"] = DailyReflection.objects.all()
+        context["daily"] = DailyReflection.objects.filter(
+            author=self.request.user
+        ).last()
+        context["weekly"] = WeeklyReflection.objects.filter(
+            author=self.request.user
+        ).last()
+        context["unit"] = UnitReflection.objects.filter(author=self.request.user).last()
         return context
-
-
-    def get_object(self):
-        return DailyReflection.objects.last()
 
 
 # Resource Template
