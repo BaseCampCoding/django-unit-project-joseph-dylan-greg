@@ -5,14 +5,8 @@
 
 {% block content %}
 <div style="padding: 15px; display:flex; flex-direction:column;">
-    {% if user.is_authenticated %}
-        <h1 style="font-size:3.5rem;">Welcome to Cards 2.0</h1>
-        <p style="font-size:1.5rem;">Study <strong>Flashcards</strong> and Review<strong> Videos</strong></p>
+        <h1 style="font-size:3.5rem; padding:5px;">Welcome to Cards 2.0</h1>
+        <p style="font-size:1.5rem; padding:5px;">Study <strong>Flashcards</strong> and Review<strong> Videos</strong></p>
         <a class="btn btn-dark ml-2" href="{% url 'home' %}" style="font-size:2rem; width:150px;">Welcome</a>
-    {% else %} 
-            <h1 style="font-size:3.5rem;"> Welcome to Cards 2.0</h1>
-            <p style="font-size:1.5rem;"> Study <strong>Flashcards</strong> and Review<strong>Videos</strong></p>
-            <h3 class="ml-2"> You are not logged in</h3>
-    {% endif %}
 </div>
     {% endblock content %}
