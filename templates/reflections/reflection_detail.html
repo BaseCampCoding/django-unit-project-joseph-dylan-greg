@@ -2,13 +2,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row no-gutters" style="padding: 15px;">
-    <div class="Rightside" style="height: 100vh; width: 100%;">
-        <p>{{ daily.body }}</p>
-    </div>
-    <div class="Leftside column" style="height: 100vh; width: 100%;">
-        <p class="row">{{ weekly.body }}</p>
-        <p class="row">{{ unit.body }}</p>
-    </div>
+<div style="padding: 15px;">
+    <p>{{ daily.body }}</p>
+    <p>{{ weekly.body }}</p>
+    <p>{{ unit.body }}</p>
 </div>
 {% endblock content %}
