@@ -31,12 +31,11 @@ For anything that is not finished or broken should be fixed by either myself, Gr
 Dylan and Joseph will work on styling with CSS/Bootstrap and Joseph will also work
 on adding some more definitions if necessary. Greg for now will continue making enough questions and if he makes enough plans will change for him to help with styling.
 
-#### Tuesday: Complete unfinished styling in the morning, the streak feature for questions, and configuring the admin site. 
-Joseph will complete any unfinished styling on the
-website, Dylan will work on a possible question streak feature for questions or an alternative feature to add for questions, and Greg will work on configuring the admin site.
+#### Tuesday: Complete unfinished styling in the morning and configuring the admin site. 
+Joseph will complete any unfinished styling on the website and Greg will work on configuring the admin site.
 
-#### Wednesday: Start bug testing on website/unfinished features. 
-Dylan, Greg, and myself will either work on unfinished features or features that have bugs.
+#### Wednesday: Start bug testing on website/unfinished features/starting deployment possibly. 
+Dylan, Greg, and myself will either work on unfinished features or features that have bugs and possibly starting deployment early.
 
 #### Thursday: Finish bug testing and complete deployment. 
 Dylan, Greg, and myself will either work completing bug testing or deployment.
