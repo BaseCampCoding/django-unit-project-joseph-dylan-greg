@@ -12,7 +12,7 @@ django-utils-six = "*"
 pillow = "*"
 django-userforeignkey = "*"
 environs = {version = "==8.0.0", extras = ["django"]}
-whitenoise = "*"
+whitenoise = "==5.1.0"
 gunicorn = "*"
 psycopg2-binary = "*"
 dj-database-url = "*"
