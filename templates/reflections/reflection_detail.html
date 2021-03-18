@@ -2,18 +2,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div style="padding: 15px; text-align: center;">
+<div style="padding: 15px; text-align: center; display:flex; flex-direction:column; align-items:center;">
     <div>
     <h1>Daily Reflections</h1>
-    <p style="background:#f2f2f2; border-radius:25px; border:.5px solid black; width:620px; margin-top: 15px; margin-left: 325px; padding: 8px; height:140px;">{{ daily.body }}</p>
+    <p style="background:#f2f2f2; border-radius:25px; border:.5px solid black; width:620px; margin-top: 15px; padding: 8px; height:140px;">{{ daily.body }}</p>
     </div>
     <div>
     <h1>Weekly Reflections</h1>
-    <p style="background:#f2f2f2; border-radius:25px; border:.5px solid black; width:620px; margin-top: 15px; margin-left: 325px; padding: 8px; height:140px;">{{ weekly.body }}</p>
+    <p style="background:#f2f2f2; border-radius:25px; border:.5px solid black; width:620px; margin-top: 15px; padding: 8px; height:140px;">{{ weekly.body }}</p>
     </div>
     <div>
     <h1>Unit Summary</h1>
-    <p style="background:#f2f2f2; border-radius:25px; border:.5px solid black; width:620px; margin-top: 15px; margin-left: 325px; padding: 8px; height:140px;">{{ unit.body }}</p>
+    <p style="background:#f2f2f2; border-radius:25px; border:.5px solid black; width:620px; margin-top: 15px; padding: 8px; height:140px;">{{ unit.body }}</p>
     </div>
 </div>
 {% endblock content %}
