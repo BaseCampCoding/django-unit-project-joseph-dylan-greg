@@ -11,6 +11,10 @@ django-model-utils = "==3.1.2"
 django-utils-six = "*"
 pillow = "*"
 django-userforeignkey = "*"
+environs = "*"
+psycopg2 = "*"
+whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 
