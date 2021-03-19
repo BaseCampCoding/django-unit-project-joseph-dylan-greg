@@ -17,11 +17,16 @@ This project was made to be a prototype learning resource page to help students 
 
 ## Technologies Used
 - Visual Studio Code
+- Python
+- HTML/CSS
+- Bootstrap
+- Javascript
+- Databases Sqlite3
 
 
 
 ## Launch
-
+There are no major requirements for the technologies listed above other then some pip installations and links.
 
 
 ## Features
@@ -42,6 +47,7 @@ This project was made to be a prototype learning resource page to help students 
 - Make the definition flash card system random and work with javascript to make it update in real time
 - Possibly add more styling to the web page
 - Make it so the user can review all reflections/summaries
+- Log in with broswer/signup
 
 
 
